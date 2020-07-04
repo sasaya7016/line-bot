@@ -1,24 +1,17 @@
-# README
+# Line-bot 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
+> ### このアプリでできること
+* ラインで話しかけると天気を教えてくれる
 
-Things you may want to cover:
 
-* Ruby version
+> ### 今後搭載予定
+* 言葉の対応のフレーズの増加
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用した技術
+* 言語:  Haml/SCSS/Javascript,Ruby/SQL
+* FW:  Ruby on Rails
+* DB:  MySQL
+* heroku
+* LINE Developers: Messaging API
