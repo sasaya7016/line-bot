@@ -10,8 +10,7 @@
 
 
 ## 使用した技術
-* 言語:  Haml/SCSS/Javascript,Ruby/SQL
-* FW:  Ruby on Rails
-* DB:  MySQL
+* 言語:  Ruby / Ruby on Rails /
+* DB: postgresql
 * heroku
 * LINE Developers: Messaging API
