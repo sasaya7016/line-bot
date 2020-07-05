@@ -61,7 +61,7 @@ class LinebotController < ApplicationController
           when /.*(こんにちは|こんばんは|初めまして|はじめまして|おはよう).*/
             push =
               "うっす。\n声をかけてくれてありがとう\n今日もいい日になりますように(^^)"
-          when /.*(なす|ナス|).*/
+          else /.*(なす|ナス).*/
             push =
               "ナス！！！\n誰がおたんこナスや"
           else
