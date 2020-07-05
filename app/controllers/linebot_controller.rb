@@ -57,13 +57,12 @@ class LinebotController < ApplicationController
           when /.*(かわいい|可愛い|カワイイ|きれい|綺麗|キレイ|素敵|ステキ|すてき|面白い|おもしろい|ありがと|すごい|スゴイ|スゴい|好き|頑張|がんば|ガンバ).*/
             push =
               "ありがとう！！！\n優しい言葉をかけてくれるあなたはとても素敵です(^^)"
-
+          when /.*(なす|ナス).*/
+            push =
+              "ナス！！！\n誰がおたんこナスや"
           when /.*(こんにちは|こんばんは|初めまして|はじめまして|おはよう).*/
             push =
               "うっす。\n声をかけてくれてありがとう\n今日もいい日になりますように(^^)"
-          else /.*(なす|ナス).*/
-            push =
-              "ナス！！！\n誰がおたんこナスや"
           else
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
