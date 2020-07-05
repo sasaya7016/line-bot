@@ -30,11 +30,6 @@ class LinebotController < ApplicationController
           # 当日朝のメッセージの送信の下限値は20％としているが、明日・明後日雨が降るかどうかの下限値は30％としている
           min_per = 30
           case input
-          # 「なす」or「ナス」or「那須」というワードが含まれる場合
-          when /.*(なす|ナス|).*/
-            push =
-              "ナス！！！\n誰がおたんこナスや"
-
             # 「明日」or「あした」というワードが含まれる場合
           when /.*(明日|あした).*/
             # info[2]：明日の天気
@@ -62,9 +57,13 @@ class LinebotController < ApplicationController
           when /.*(かわいい|可愛い|カワイイ|きれい|綺麗|キレイ|素敵|ステキ|すてき|面白い|おもしろい|ありがと|すごい|スゴイ|スゴい|好き|頑張|がんば|ガンバ).*/
             push =
               "ありがとう！！！\n優しい言葉をかけてくれるあなたはとても素敵です(^^)"
+
           when /.*(こんにちは|こんばんは|初めまして|はじめまして|おはよう).*/
             push =
               "うっす。\n声をかけてくれてありがとう\n今日もいい日になりますように(^^)"
+          when /.*(なす|ナス|).*/
+            push =
+              "ナス！！！\n誰がおたんこナスや"
           else
             per06to12 = doc.elements[xpath + 'info/rainfallchance/period[2]l'].text
             per12to18 = doc.elements[xpath + 'info/rainfallchance/period[3]l'].text
